@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+::-webkit-scrollbar {
+    @apply hidden;
+}
+.custom-toast {
+    background-color: #77fc776b;
+    color:blue;
+    font-family: Outfit;
+    height: 4px !important;
+}
