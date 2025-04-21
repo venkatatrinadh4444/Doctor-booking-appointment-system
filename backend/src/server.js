@@ -12,7 +12,7 @@ const appointmentRoutes=require('./routes/appointmentRoutes')
 const app=express()
 const PORT=process.env.PORT || 5000
 
-app.use(cors({origin:["https://doctor-booking-appointment-system-taupe.vercel.app","https://doctor-booking-appointment-system-p8am.vercel.app"],credentials:true}))
+app.use(cors({origin:["https://patient-dashboard-nine.vercel.app","https://admin-dashboard-lime-nu-14.vercel.app"],credentials:true}))
 app.use(cookieParser())
 app.use(express.json())
 
