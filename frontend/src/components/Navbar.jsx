@@ -42,6 +42,7 @@ const Navbar = () => {
             <li>CONTACT</li>
             <hr className="hidden w-5/6 h-[2.5px] bg-blue-500 m-auto rounded" />
           </NavLink>
+          <a href="https://admin-dashboard-lime-nu-14.vercel.app" target="_blank" className="border border-slate-900 px-2 rounded-full text-gray-800 hidden md:block">Admin</a>
         </ul>
         <div className="flex gap-2">
           {user?.name ? (
