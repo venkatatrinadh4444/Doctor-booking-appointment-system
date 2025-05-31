@@ -3,7 +3,7 @@ const jwt=require('jsonwebtoken');
 
 const userToken=async(req,res,next)=> {
     try {
-        const user_token=req.cookies.token
+        const {user_token}=req.cookies
         if(!user_token)
             return res.status(404).json({msg:'Token not found!'})
         const decoded=jwt.verify(user_token,process.env.JWT_SECRET)

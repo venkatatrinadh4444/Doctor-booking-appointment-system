@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="https://admin-dashboard-lime-nu-14.vercel.app" target="_blank" className="border border-slate-900 px-2 rounded-full text-gray-800 hidden md:block">Admin</a>
         </ul>
         <div className="flex gap-2">
-          {user?.name ? (
+          {user?.email ? (
             <div className="flex items-center gap-1 cursor-pointer group">
               <img
                 src={user?.image}
