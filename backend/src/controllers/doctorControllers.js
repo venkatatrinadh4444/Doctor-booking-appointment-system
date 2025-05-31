@@ -69,7 +69,7 @@ const doctorLogin=async(req,res)=> {
         const token=jwt.sign({id:doctor._id,email,password},process.env.JWT_SECRET,{expiresIn:'1h'})
         res.cookie('token',token,{
             httpOnly:true,
-            secure:process.env.NODE_ENV==='poduction',
+            secure:process.env.NODE_ENV==='production',
             sameSite:process.env.NODE_ENV==='production'?'none':'lax',
             maxAge:60*60*1000
         })
