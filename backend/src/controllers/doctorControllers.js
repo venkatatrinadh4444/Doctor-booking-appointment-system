@@ -67,9 +67,10 @@ const doctorLogin=async(req,res)=> {
         if(email!==doctor.email || !await bcrypt.compare(password,doctor.password))
             return res.status(401).json({msg:'Invalid credentials'})
         const token=jwt.sign({id:doctor._id,email,password},process.env.JWT_SECRET,{expiresIn:'1h'})
+
         res.cookie('token',token,{
             httpOnly:true,
-            secure:process.env.NODE_ENV==='production',
+            secure:process.env.NODE_ENV==='production'?true:false,
             sameSite:process.env.NODE_ENV==='production'?'none':'lax',
             maxAge:60*60*1000
         })
